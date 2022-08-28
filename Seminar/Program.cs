@@ -80,9 +80,9 @@
 
 // void findDistance(int Ox, int Oy, int Nx, int Ny)
 // {
-//     double distance = Math.Round(Math.Sqrt(Math.Pow((Ox - Nx), 2) + Math.Pow((Oy - Ny), 2)));
-
-//     Console.WriteLine($"The distance is {distance}");
+//     double distance = Math.Sqrt(Math.Pow((Ox - Nx), 2) + Math.Pow((Oy - Ny), 2));
+////f2 or f5 - to leave the needed number of digits after the comma
+//     Console.WriteLine($"The distance is {distance:f2}");
 // }
 
 // findDistance(Ax, Ay, Bx, By);
@@ -96,12 +96,22 @@ Console.WriteLine("Insert a number:");
 int N = Convert.ToInt32(Console.ReadLine());
 rowOfSquares(N);
 
+// void rowOfSquares (int x)
+// {
+//     int index = 1;
+//     while (index <= x)
+//     {
+//         Console.Write($"{Math.Pow(index, 2)} ");
+//         index++;
+//     }
+// }
+
+// other option - for cycle
 void rowOfSquares (int x)
 {
-    int index = 0;
-    while (index < x-1)
+
+    for (int i = 1; i <= N; i++)
     {
-        Console.Write($"{Math.Pow(index, 2)} ");
-        index++;
+        Console.Write($"{Math.Pow(i, 2)} ");
     }
 }
